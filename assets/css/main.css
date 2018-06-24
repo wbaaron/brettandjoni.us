@@ -1,17 +1,42 @@
+html { height:100%; }
+
 body {
-  background: cover center no-repeat url(../img/walk.jpg);
+  background: url(../img/walk.jpg) no-repeat center;
+  background-size:cover;
 }
 
 .save-the-date {
   color: #fff;
-  font-size:4em;
-  padding:25%;
+  font-size:3em;
+  position:absolute;
+  bottom:10vh;
+  left:6vw;
+}
+
+h1, h2, h3 {
+  line-height:1;
+  margin:0;
+}
+
+h2, h3 {
+  font-family: 'Amatic SC', cursive;
 }
 
 h1 {
   font-family: 'Abril Fatface', cursive;
+  font-weight:normal;
 }
 
 h1 span {
   font-family: 'Dancing Script', cursive;
+  font-size:1.25em;
+}
+
+h2 {
+  font-size:1em;
+  line-height:1;
+}
+
+h3 {
+  font-size:0.8em;
 }
