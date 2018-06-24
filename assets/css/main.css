@@ -19,7 +19,9 @@ h1, h2, h3 {
 }
 
 h2, h3 {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Source Code Pro', monospace;
+  font-weight:200;
+  font-size:0.77em;
 }
 
 h1 {
@@ -33,10 +35,10 @@ h1 span {
 }
 
 h2 {
-  font-size:1em;
   line-height:1;
 }
 
 h3 {
-  font-size:0.8em;
+  margin-top:0.5em;
+  text-align: center;
 }
