@@ -1,3 +1,17 @@
 body {
-  background: cover center no-repeat url(../img/kiss.jpg);
+  background: cover center no-repeat url(../img/walk.jpg);
+}
+
+.save-the-date {
+  color: #fff;
+  font-size:4em;
+  padding:25%;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+}
+
+h1 span {
+  font-family: 'Dancing Script', cursive;
 }
