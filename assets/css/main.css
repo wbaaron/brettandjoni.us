@@ -1,44 +1,252 @@
+* { box-sizing: border-box; }
 html { height:100%; }
 
 body {
-  background: url(../img/walk.jpg) no-repeat center;
-  background-size:cover;
+  font-family: 'Merriweather', sans-serif;
 }
 
-.save-the-date {
-  color: #fff;
-  font-size:3em;
-  position:absolute;
-  bottom:10vh;
-  left:6vw;
-}
-
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   line-height:1;
   margin:0;
-}
-
-h2, h3 {
-  font-family: 'Source Code Pro', monospace;
-  font-weight:200;
-  font-size:0.77em;
-}
-
-h1 {
-  font-family: 'Abril Fatface', cursive;
   font-weight:normal;
 }
 
-h1 span {
-  font-family: 'Dancing Script', cursive;
+h1, h1 a, nav li a, section.content.dark, .save-the-date {
+  color:#fff;
+}
+
+h1 {
+  font-family: 'Cutive Mono', cursive;
   font-size:1.25em;
+  transition: all 200ms ease-in-out;
+  transform: translate3d(0, -200%, 0);
+  display:flex;
+  align-items:center;
 }
 
 h2 {
-  line-height:1;
+  font-family: 'Cutive Mono', cursive;
+  font-size:2.5em;
 }
 
 h3 {
+  font-family: 'Playfair Display', serif;
+  text-transform: lowercase;
+  text-align:center;
+}
+
+h3 span {
+  font-weight:bold;
+}
+
+h3 + hr {
+  width:3em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+nav {
+  padding:0 2em 0;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  transition:all 200ms ease-in-out;
+  display:flex;
+  justify-content:space-between;
+  z-index:1;
+}
+
+nav.scrolled {
+  background:#6780a2;
+}
+
+nav.scrolled h1 {
+  transform: translate3d(0, 0, 0);
+}
+
+nav ol {
+  display:flex;
+  justify-content:flex-end;
+  margin:1em 0;
+  padding:0;
+}
+
+nav li {
+  display:inline-block;
+}
+
+nav li a {
+  display:block;
+  padding:0.25em 0;
+  margin:0 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family:'Arima Madurai', cursive;
+  font-weight:200;
+  text-shadow:1px 1px 7px rgba(0,0,0,0.15);
+  position: relative;
+  transition:all 200ms ease-in-out;
+}
+
+nav a:after {
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  height:2px;
+  width:0;
+  background-color:#fff;
+  transition:all 200ms ease-in-out;
+}
+
+nav a:hover:after {
+  width:100%;
+}
+
+section {
+  width:100%;
+}
+
+section.hero {
+  background: url(../img/walk.jpg) no-repeat center right;
+  background-size:cover;
+  display:flex;
+  align-items:flex-end;
+  height:100vh;
+}
+
+section.content {
+  padding:3em 2em;
+  min-height:30vh;
+}
+
+section.content.dark {
+  background: #333;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #111;
+}
+
+section.content img {
+  display:block;
+  margin-top:2em;
+  margin-bottom:2em;
+  width:540px;
+  max-width:100%;
+}
+
+section.content img.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+section.content p, section.content dl {
+  line-height:1.6;
+  font-size:1.125em;
+  width:960px;
+  max-width:100%;
+  margin:1em auto;
+}
+
+section.content p .emphasis-line {
+  font-size:1.05em;
+  font-weight:bold;
+}
+
+section.content .col2 {
+  display:flex;
+  justify-content: center;
+}
+
+section.content .col2 > * {
+  flex:1;
+}
+
+section.content .col2 img {
+  width:500px;
+  margin-right:2em;
+  max-width:100%;
+  flex:0;
+  align-self:start;
+}
+
+/* SECTION Save the Date *************************/
+.save-the-date {
+  font-size:3em;
+  padding:0 0 2em 2em;
+  text-shadow:1px 1px 22px rgba(0,0,0,0.15);
+}
+
+.save-the-date p {
+  font-family: 'Arima Madurai', cursive;
+  font-weight:200;
+  font-size:0.55em;
+  display:flex;
+}
+
+.save-the-date p:first-child {
+  margin-bottom:0.5em;
+}
+
+.save-the-date p:last-child {
   margin-top:0.5em;
+}
+
+.save-the-date p span {
+  flex:1;
+}
+
+.save-the-date p span:first-child {
+  text-align: right;
+}
+
+.save-the-date p span:nth-child(2) {
+  flex:0;
+  text-align: center;
+  padding:0 0.5em;
+}
+
+.save-the-date h2 {  
   text-align: center;
 }
+
+.save-the-date h2 span {
+  font-family: 'Mr De Haviland', cursive;
+  font-size:0.85em;
+  position: relative;
+  bottom: 12px;
+  left: 4px;
+}
+/* END SECTION Save the Date *********************/
+
+/* SECTION First Meeting *************************/
+section.first-meeting p {
+  max-width:720px;
+  margin-left:0;
+  margin-right:0;
+}
+/* END SECTION First Meeting *********************/
+
+/* SECTION Relationship **************************/
+#gallery {
+  max-width: 100%;
+  width: 960px;
+  margin: 2em auto;
+}
+/* END SECTION Relationship **********************/
+
+/* SECTION Proposal ******************************/
+
+/* END SECTION Proposal **************************/
+
+/* SECTION Event *********************************/
+
+/* END SECTION Event *****************************/
+
+/* SECTION City **********************************/
+
+/* END SECTION City ******************************/
+
+/* SECTION RSVP **********************************/
+
+/* END SECTION RSVP ******************************/
