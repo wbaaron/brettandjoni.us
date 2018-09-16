@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Marigold';
+    src: url('../fonts/Marigold.woff2') format('woff2'),
+        url('../fonts/Marigold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Claxton';
+    src: url('../fonts/ClaxtonLight.woff2') format('woff2'),
+        url('../fonts/ClaxtonLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dandelion Script';
+    src: url('../fonts/DandelionScript.woff2') format('woff2'),
+        url('../fonts/DandelionScript.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Soak Up The Sun Script';
+    src: url('../fonts/SoakUpTheSunScript.woff2') format('woff2'),
+        url('../fonts/SoakUpTheSunScript.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

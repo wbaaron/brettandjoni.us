@@ -1,11 +1,18 @@
 /* eslint-disable */
 $(function() {
-  for (var i = 1; i <= 11; ++i) {
+  var i;
+  var $bgSlider = $('#bg-slider');
+  for (i = 1; i <= 8; ++i) {
+    $bgSlider.append('<li><img src="assets/img/slider/' + i + '.jpg"></li>')
+  }
+
+  var $gallery = $('#gallery');
+  for (i = 1; i <= 11; ++i) {
     $("#gallery").append('<img alt="" src="assets/img/gallery/' + i + '_tn.jpg" data-image="assets/img/gallery/' + i + '.jpg" data-description="">');
   }
 
   $("#gallery").unitegallery({
-    gallery_theme: "tiles"        
+    gallery_theme: "tiles"
   });
 
   setupSmoothScrolling();
