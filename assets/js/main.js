@@ -36,16 +36,16 @@ $(function() {
   setupSmoothScrolling();
   countdown('2019-10-12T19:00:00-06:00');
 
-  $('body').addClass('active');
-  setTimeout(function() {
-    $('section.hero .badge-wrapper').addClass('animate');
-  }, 150);
-
   $('section.details input').on('change', function(e) {
     if ($('label.mobile').is(':visible')) {
       $('nav a[href="#details"]').click();
     }
   });
+
+  $('body').addClass('active');
+  setTimeout(function() {
+    $('section.hero .badge-wrapper').addClass('animate');
+  }, 150);
 });
 
 function setupTabAutoAdjust() {
@@ -62,13 +62,16 @@ function setupTabAutoAdjust() {
     });
   };
 
-  _recalcHeights();
-  $(window).on('resize', _recalcHeights);
-
   $('.has-auto-size-tabs input').on('change', function(e) {    
     var $tabToShow = $(this).siblings('.tab-content, .tab-container').find('.' + $(this).attr('id'));
     $(this).siblings('.tab-content, .tab-container').css('height', $tabToShow.length > 0 ? $tabToShow.outerHeight() + 'px' : '');
   });
+
+  $(window).on('resize', _recalcHeights);
+  _recalcHeights();
+
+  // just for good measure
+  setTimeout(_recalcHeights, 15);
 }
 
 function setupSmoothScrolling() {
