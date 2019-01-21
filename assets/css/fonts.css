@@ -15,9 +15,9 @@
 }
 
 @font-face {
-    font-family: 'Dandelion Script';
-    src: url('../fonts/DandelionScript.woff2') format('woff2'),
-        url('../fonts/DandelionScript.woff') format('woff');
+    font-family: 'Dandelion Vintage';
+    src: url('../fonts/DandelionVintage.woff2') format('woff2'),
+        url('../fonts/DandelionVintage.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

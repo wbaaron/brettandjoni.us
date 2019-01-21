@@ -8,13 +8,14 @@
   <meta name="description" content="Save the Date! Joni Wiley and Brett Aaron ~ October 12th 2019">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <base href="/brettandjoni.us/">
+  <!--<base href="/brettandjoni.us/">-->
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/defaults.css">
   <link rel="stylesheet" href="assets/css/headerscale.css">
@@ -25,14 +26,14 @@
 
 <body>
   <nav>
-    <h1>cat icons</h1>
+    <h1><a href="#home"><div class="header-badge-wrapper"><div class="header-badge-inner">J<span>&amp;</span>B</div></div></a><div class="banner"></div></h1>
     <ol>
       <li><a href="#home">Home</a></li>
-      <li><a href="#groom-and-bride">Groom & Bride</a></li>
+      <li><a href="#bride-and-groom">Bride & Groom</a></li>
       <li><a href="#details">Details</a></li>
       <li><a href="#registry">Registry</a></li>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#rsvp" class="rsvp">RSVP</a></li>
+      <li><a href="https://goo.gl/forms/KFumxbLLr11FoMKE2" class="rsvp" target="_blank"><span>RSVP</span></a></li>
     </ol>
   </nav>
   <main>
@@ -40,15 +41,24 @@
       <a name="home"></a>
       <div class="badge-wrapper">
         <div class="badge-inner">
-          <h1>Joni & Brett</h1>
-          <h2>Kansas City | October 12 | 2019</h2>
+          <h1>Joni <span>&</span> Brett</h1>
+          <h2>Kansas City, MO <span>|</span> October 12, 2019</h2>
         </div>
     	</div>
-      <ul id="bg-slider"></ul>
+      <ul id="bg-slider">
+        <li><img src="assets/img/slider/1.jpg"></li>
+        <li><img src="assets/img/slider/2.jpg"></li>
+        <li><img src="assets/img/slider/3.jpg"></li>
+        <li><img src="assets/img/slider/4.jpg"></li>
+        <li><img src="assets/img/slider/5.jpg"></li>
+        <li><img src="assets/img/slider/6.jpg"></li>
+        <li><img src="assets/img/slider/7.jpg"></li>
+        <li><img src="assets/img/slider/8.jpg"></li>
+      </ul>
     </section>
     <section class="bride-and-groom">
       <a name="bride-and-groom"></a>
-      <input type="radio" name="bride-and-groom" value="groom" id="about-groom">
+      <input type="radio" name="bride-and-groom" value="groom" id="about-groom" checked>
       <input type="radio" name="bride-and-groom" value="bride" id="about-bride">
       <input type="radio" name="bride-and-groom" value="our-story" id="our-story">
       <input type="radio" name="bride-and-groom" value="engagement" id="engagement">
@@ -56,7 +66,7 @@
         <li>
           <label for="about-groom">
             <span class="icon-bg">
-              <img src="">
+              <img src="assets/img/groom.png">
             </span>
             <h3>About Groom</h3>
           </label>
@@ -64,7 +74,7 @@
         <li>
           <label for="about-bride">
             <span class="icon-bg">
-              <img src="">
+              <img src="assets/img/bride.png">
             </span>
             <h3>About Bride</h3>
           </label>
@@ -72,7 +82,7 @@
         <li>
           <label for="our-story">
             <span class="icon-bg">
-              <img src="">
+              <img src="assets/img/story.png">
             </span>
             <h3>Our Story</h3>
           </label>
@@ -80,36 +90,200 @@
         <li>
           <label for="engagement">
             <span class="icon-bg">
-              <img src="">
+              <img src="assets/img/engagement.png">
             </span>
             <h3>Engagement</h3>
           </label>
         </li>
       </ul>
-      <div class="tab-content">
-        <div class="about-groom">About Groom</div>
-        <div class="about-bride">About Bride</div>
-        <div class="our-story">Our Story</div>
-        <div class="engagement">Engagement</div>
+      <div class="tab-content auto-size">
+        <div class="about-groom">
+          <img src="assets/img/nope.webp">
+          <article>
+            <aside>
+              <h4>Brett Aaron</h4>
+              <span>Son of Mr. & Mrs. James Aaron</span>
+            </aside>
+            <p>The groom was born and raised in Birmingham, AL. A graduate of the University of Alabama, "Roll Tide" and Bama football rank high on the list of things he loves. Brett enjoys sci-fi, video games, movies, and computer programming. He loves introducing his fiancée to some of his favorite activities. Brett is a fantastic cook and spoils Joni with home-cooked restaurant quality cuisines. He is excited to return to Kansas City to celebrate this day with his soon to be bride, family, and friends.</p>
+          </article>
+        </div>
+        <div class="about-bride">
+          <img src="assets/img/nope.webp">
+          <article>
+            <aside>
+              <h4>Joni Wiley</h4>
+              <span>Daughter of Mr. Joseph Wiley Jr. & Ms. Melia Lipford Wiley</span>
+            </aside>
+            <p>The bride is happy to call the state of Kansas home. After living in the suburbs and downtown, Kansas City has always held a special place in Joni's heart. Joni moved to Birmingham, AL when she accepted her first job after graduate school. She had no idea that this would be where she would meet her future husband. Four years and fifteen countries later Joni is so excited to walk down the aisle. Joni loves traveling, crafting, binging tv shows, and is always eager to try a new meal.</p>
+          </article>
+        </div>
+        <div class="our-story">
+          <img src="assets/img/nope.webp">
+          <article>
+            <aside>
+              <h4>Our Story</h4>
+              <span>Dinner for Two</span>
+            </aside>
+            <p>Food has always been a staple of Joni and Brett's relationship, and the way they met was no different. It started at the aptly-named, Glory Bound restaurant in Tuscaloosa, AL. Or rather it would have... Joni was invited to Tuscaloosa by her childhood friend, Lauren, to go get dinner and have drinks. Brett was invited out by his college roommate Nick, who at the time was dating Lauren (now they are happily married). Having driven from Atlanta that morning, Joni unfortunately missed dinner and unknowingly postpone her meeting of Brett. The meet up wasn't postponed for long, as an hour later Joni arrived in Tuscaloosa. Instantly hitting it off, both knew this wouldn't be the last time they saw each other. Two days later, Joni was back in Tuscaloosa for their first time “hanging out”, they went to Brett's favorite sushi restaurant Ichiban. Brett was clearly smitten, because the next day Brett asked Joni on an “official” date and they went to the restaurant El Barrio in Birmingham, where Brett's childhood best friend, Neil, just happened to be their server. El Barrio has always been a staple in the relationship ever since that first date, with the couple's first home together, a loft, on the same street as the restaurant. Brett and Joni's love for food is almost as great as their love for each other!</p>
+          </article>
+        </div>
+        <div class="engagement">
+          <img src="assets/img/nope.webp">
+          <article>
+            <aside>
+              <h4>Engagement</h4>
+              <span>Sky's the Limit</span>
+            </aside>
+            <p>Traveling has become one of Brett and Joni's favorite activities, so it comes at no surprise that a vacation would serve as the backdrop for their engagement. Joni had just finished running a week-long summer camp for high school students. Exhausted and a little smelly she was apprehensive when Brett had something planned for her week off. With little sleep and time to recuperate the couple jumped on a plane to head north to Toronto, Canada. This was an unusual trip, because it was a complete surprise to control fanatic Joni. Reluctantly at times, Joni took a backseat while Brett led the way. Four days into the trip, Joni was unware that the biggest surprise was yet to come. The morning started with a trip to the Niagara Falls, a beautiful site to see. Headed back for dinner reservations with plenty of time to spare, or so they thought, they were in a slight fender bender (not our fault) on the highway in their rental car. This 90 minute delay, put a kink in their plans.<br><br>Nevertheless, they made it back and were able to make their dinner reservations at a popular Toronto eatery, Rasa. While there they enjoyed a special tasting menu called "The Experience", an 8 course menu of their Canadian fusion cuisine. Next, using the historic Toronto Streetcar, they traveled to the Billy Bishop Island Airport. Joni had no idea what would happened next as they entered a small trailer on the tarmac of the airport. To her surprise they would soon take off on a twilight helicopter tour, an adventure that has been on Joni's bucket list for years. As they soared through the sky, Brett nervous and shaky started recounting the years of their relationship. As the helicopter landed, the couple still mesmerized by the breathtaking experience stepped out. However, this adventure was far from over! As the photographer distracted Joni for a few more pictures, Brett sneakily reached into his pocket and got on one knee. HE POPPED THE QUESTION! Stunned and trying to stay composed Joni said yes! An apprehensive vacation, turned into the adventure of a lifetime.</p>
+          </article>
+        </div>
       </div>
     </section>
     <section class="break"></section>
     <section class="details">
       <a name="details"></a>
+      <h3><span>Details</span></h3>
+      <input type="radio" name="details" value="wedding-details" id="wedding-details">
+      <input type="radio" name="details" value="accommodations" id="accommodations">
+      <input type="radio" name="details" value="explore-kc" id="explore-kc">
+      <input type="radio" name="details" value="travel" id="travel">
+      <input type="radio" name="details" id="details-close">
+      <div class="tab-container">
+        <div class="tab-content">
+          <label for="details-close" class="top">← back</label>
+          <label for="details-close" class="bottom">← back</label>
+          <div class="wedding-details">
+            <article>
+              <h4>Wedding Details</h4>
+              <h5>Ceremony & Reception</h5>
+              <time datetime="2019-10-12T18:00-06:00">Saturday, October 12, 2019 - 6:00pm</time>
+              <h6>The Bride and the Bauer</h6>
+              <address>115 W. 18th Street<br>Kansas City, MO 64108<br><a href="https://goo.gl/maps/TgJ7AUw13z92" target="_blank" class="external">Google Maps</a></address>
+              <p>Free street parking and parking lots are available close to the event. There is limited space in the parking lots so we suggest carpooling or taking an Uber/Lyft. No vehicles may be left in the parking lot overnight or they WILL be towed!<br><br>Dress - Cocktail Attire.</p>
+              <a href="https://goo.gl/forms/KFumxbLLr11FoMKE2" class="rsvp" target="_blank"><span>RSVP</span></a>
+            </article>
+            <aside>
+              <a href="assets/img/map.jpg" target="_blank"><img src="assets/img/map.jpg"></a><p>click map to enlarge</p>
+            </aside>
+          </div>
+          <div class="accommodations">
+            <article>
+              <h4>Accommodations</h4>
+              <p>There are many hotels and AirBnBs close to the wedding venue with short rides to many of Kansas City’s main attractions.</p>
+              <h5>Hotels</h5>
+              <ul class="options">
+                <li>
+                  <h6><a href="https://www.hotelphillips.com/" target="_blank">Hotel Phillips</a></h6>
+                  <address>106 W 12th Street<br>Kansas City, Mo 64105<br><a href="https://goo.gl/maps/TgJ7AUw13z92" target="_blank" class="external">Google Maps</a></address>
+                </li>
+                <li>
+                  <h6><a href="https://www3.hilton.com/en/hotels/missouri/hilton-president-kansas-city-MCIPRHF/index.html" target="_blank">Hilton President</a></h6>
+                  <address>1329 Baltimore Ave<br>Kansas City, Mo 64105<br><a href="https://goo.gl/maps/5vQWjs2gJJJ2" target="_blank" class="external">Google Maps</a></address>
+                </li>
+                <li>
+                  <h6><a href="https://www.marriott.com/hotels/travel/mcidt-kansas-city-marriott-downtown/" target="_blank">KC Marriott</a></h6>
+                  <address>200 W 12th St<br>Kansas City, Mo 64105<br><a href="https://goo.gl/maps/HGUMvP8ue692" target="_blank" class="external">Google Maps</a></address>
+                </li>
+                <li>
+                  <h6><a href="https://www.ihg.com/hotelindigo/hotels/us/en/kansas-city/mkcsw/hoteldetail" target="_blank">Hotel Indigo</a></h6>
+                  <address>101 W 11th St<br>Kansas City, Mo 64105<br><a href="https://goo.gl/maps/1ooK5XrYw312" target="_blank" class="external">Google Maps</a></address>
+                </li>
+              </ul>
+            </article>
+            <article>
+              <h5><img src="assets/img/airbnb.svg" alt="AirBnB" class="logo"></h5>
+              <ul class="options">
+                <li>
+                  <h6><a href="https://www.airbnb.com/wishlists/322837891/join?invite_code=RPBUYFSY&inviter_id=30774186" target="_blank" class="external">1-6 Guests (Page 1)</a></h6>
+                </li>
+                <li>
+                  <h6><a href="https://www.airbnb.com/wishlists/333501928/join?invite_code=HXHYRLXC&inviter_id=30774186" target="_blank" class="external">1-6 Guests (Page 2)</a></h6>
+                </li>
+                <li>
+                  <h6><a href="https://www.airbnb.com/wishlists/333480947/join?invite_code=TTNUIXMJ&inviter_id=30774186" target="_blank" class="external">6+ Guests</a></h6>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="explore-kc">
+            <article>
+              <h4>Explore KC!</h4>
+              <p>There is so much to do in Kansas City and something for everyone.</p>
+              <ul class="list">
+                <li><a href="https://www.chiefs.com/" target="_blank">Kansas City Chiefs football</a></li>
+                <li><a href="http://www.nlbm.com/" target="_blank">Negro Leagues Baseball Museum</a></li>
+                <li><a href="https://www.thrillist.com/travel/nation/best-bbq-kansas-city-kc-barbecue-restaurants" target="_blank">Kansas City BBQ</a></li>
+                <li><a href="https://www.boulevard.com/" target="_blank">Boulevard Brewing Company</a></li>
+                <li><a href="https://www.countryclubplaza.com/" target="_blank">Country Club Plaza</a></li>
+              </ul>
+              <p>These are just our suggestions. <a href="https://www.tripadvisor.com/Attractions-g44535-Activities-Kansas_City_Missouri.html" target="_blank">Click here to explore for yourself!</a></p>
+            </article>
+            <article>
+              <img src="assets/img/kc.jpg">
+            </article>
+          </div>
+          <div class="travel">
+            <article>
+              <h4>Travel</h4>
+              <p>Airport - Kansas City International Airport (MCI)</p>
+              <p>Getting from the airport to downtown is about a 25 minute drive (~$35 Uber/Lyft ride). There are also airport shuttles available.</p>
+              <a href="https://goo.gl/maps/WL5NSf7kDd32" target="_blank"><img src="assets/img/mci-map.png"></a>
+            </article>
+            <article>
+              <img src="assets/img/uber.png" class="logo"><img src="assets/img/lyft.png" class="logo">
+              <p>Kansas City has both Uber and Lyft to get you around conveniently!</p>
+              <p>Please note that Kansas City is fairly large city with a lot going on. We are getting married downtown where a lot of popular events happen and road work is inevitable. When traveling, please allow extra time for traffic and other possible delays.</p>
+              <img src="assets/img/kc-streetcar.png" class="large logo">
+              <p>If you want to explore downtown, take a ride on the FREE Ride KC Streetcar! Learn more at <a href="http://kcstreetcar.org/" target="_blank" class="external">KCStreetcar.org</a></p>
+            </article>
+          </div>
+        </div>
+        <ul class="tabs">
+          <li>
+            <label for="wedding-details">
+              <h3>Wedding Details</h3>
+            </label>
+          </li>
+          <li>
+            <label for="accommodations">
+              <h3>Accommodations</h3>
+            </label>
+          </li>
+          <li>
+            <label for="explore-kc">
+              <h3>Explore KC!</h3>
+            </label>
+          </li>
+          <li>
+            <label for="travel">
+              <h3>Travel</h3>
+            </label>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="registry">
       <a name="registry"></a>
+      <h3><span>Registry</span></h3>
+      <div class="registry-container">
+        <iframe src="https://www.blueprintregistry.com/registry/BrettandJoni"></iframe>
+      </div>
     </section>
     <section class="gallery">
       <a name="gallery"></a>
+      <h3><span>Gallery</span></h3>
       <div id="gallery" style="display:none;"></div>
     </section>
   </main>
   <footer>
     <section class="countdown">
+      <div><span id="days"></span></div>
+      <div><span id="hours"></span></div>
+      <div><span id="minutes"></span></div>
+      <div><span id="seconds"></span></div>
     </section>
     <div class="footer-badge-wrapper">
-      <div class="footer-badge-inner">J&B</div>
+      <div class="footer-badge-inner">J<span>&</span>B</div>
     </div>
   </footer>
 
