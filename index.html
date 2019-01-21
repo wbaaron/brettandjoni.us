@@ -25,17 +25,29 @@
 </head>
 
 <body>
-  <nav>
-    <h1><a href="#home"><div class="header-badge-wrapper"><div class="header-badge-inner">J<span>&amp;</span>B</div></div></a><div class="banner"></div></h1>
-    <ol>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#bride-and-groom">Bride & Groom</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#registry">Registry</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="https://goo.gl/forms/KFumxbLLr11FoMKE2" class="rsvp" target="_blank"><span>RSVP</span></a></li>
-    </ol>
-  </nav>
+  <header>
+    <h1>
+      <a href="#home">
+        <div class="header-badge-wrapper">
+          <div class="header-badge-inner">J<span>&amp;</span>B</div>
+        </div>
+      </a>
+    </h1>
+    <nav>
+      <input type="checkbox" id="mobile-toggle" class="mobile">
+      <label for="mobile-toggle" class="mobile">
+        <span></span>
+      </label>
+      <ol>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#bride-and-groom">Bride & Groom</a></li>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#registry">Registry</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ol>
+      <a href="https://goo.gl/forms/KFumxbLLr11FoMKE2" class="rsvp" target="_blank"><span>RSVP</span></a>
+    </nav>
+  </header>
   <main>
     <section class="hero">
       <a name="home"></a>
@@ -56,7 +68,7 @@
         <li><img src="assets/img/slider/8.jpg"></li>
       </ul>
     </section>
-    <section class="bride-and-groom">
+    <section class="bride-and-groom has-auto-size-tabs">
       <a name="bride-and-groom"></a>
       <input type="radio" name="bride-and-groom" value="groom" id="about-groom" checked>
       <input type="radio" name="bride-and-groom" value="bride" id="about-bride">
@@ -140,7 +152,7 @@
       </div>
     </section>
     <section class="break"></section>
-    <section class="details">
+    <section class="details has-auto-size-tabs">
       <a name="details"></a>
       <h3><span>Details</span></h3>
       <input type="radio" name="details" value="wedding-details" id="wedding-details">
@@ -149,7 +161,7 @@
       <input type="radio" name="details" value="travel" id="travel">
       <input type="radio" name="details" id="details-close">
       <div class="tab-container">
-        <div class="tab-content">
+        <div class="tab-content auto-size">
           <label for="details-close" class="top">← back</label>
           <label for="details-close" class="bottom">← back</label>
           <div class="wedding-details">

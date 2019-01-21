@@ -6,6 +6,8 @@ body {
   pointer-events: none;
   -webkit-transition:opacity 200ms ease-in-out;
   transition:opacity 200ms ease-in-out;
+  max-width:1920px;
+  margin:0 auto;
 }
 
 body.active {
@@ -36,11 +38,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight:normal;
 }
 
-nav {
+header {
   padding:1em 2em;
+  max-width:1920px;
   position:fixed;
   top:0;
   left:0;
+  right:0;
+  margin:0 auto;
   width:100%;
   transition:all 200ms ease-in-out;
   display:flex;
@@ -49,27 +54,20 @@ nav {
   background:#fbf8f7;
 }
 
-nav h1 {
-  position:relative;
+header h1 {
+  z-index:1;
 }
 
-nav h1 a {
+header h1 a {
   text-decoration:none;
-}
-
-nav h1 .banner {
-  position:absolute;
-  top:-22%;
-  left:-13%;
-  width:56px;
-  height:56px;
-  border-radius:28px;
+  display: block;
+  padding:10px 8px 8px;
+  border-radius:50%;
   background:url(../img/footer_bg.jpg) no-repeat center;
   background-size:1000%;
-  z-index:-1;
 }
 
-nav ol {
+header ol {
   display:flex;
   align-items:center;
   justify-content:flex-end;
@@ -77,11 +75,75 @@ nav ol {
   padding:0;
 }
 
-nav li {
+header li {
   display:inline-block;
 }
 
-nav li a, a.rsvp {
+header li a:hover {
+  color:#ae6835;
+}
+
+header label.mobile {
+  align-items:center;
+  cursor:pointer;
+  user-select: none;
+  height: 100%;
+  z-index:1;
+}
+
+header .mobile {
+  display:none;
+}
+
+header label.mobile span, header label.mobile span::before, header label.mobile span::after {
+  display:block;
+  width:33px;
+  height:3px;
+  background:#444;
+  border-radius:3px;
+  transition: all 0.2s ease-out;
+}
+
+header label.mobile span {
+  position:relative;
+}
+
+header label.mobile span::before, header label.mobile span::after {
+  content:"";
+  position:absolute;
+}
+
+header label.mobile span::before {
+  top:-8px;
+}
+
+header label.mobile span::after {
+  top:8px;
+}
+
+header input.mobile:checked + label span {
+  background: transparent;
+  transform:scale(0.5);
+}
+
+header input.mobile:checked + label span::before, header input.mobile:checked + label span::after {
+  top:0;
+}
+
+header input.mobile:checked + label span::before {
+  transform: rotate(45deg) scale(1.75);
+}
+
+header input.mobile:checked + label span::after {
+  transform: rotate(-45deg) scale(1.75);
+}
+
+header nav {
+  display:flex;
+  align-items:center;
+}
+
+header nav a, a.rsvp {
   display:block;
   padding:0.1em 0;
   margin:0 1em;
@@ -92,27 +154,22 @@ nav li a, a.rsvp {
   transition:all 200ms ease-in-out;
 }
 
-nav li a:hover {
-  color:#ae6835;
-}
-
-a.external[target="_blank"]:after {
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
-  margin: 0 3px 0 5px;
-}
-
 a.rsvp {
+  padding:0.25em 1.75em;
   border: 1px solid #ae6835;
   color:#fff;
   background-color: #ae6835;
-  padding: 0.25em 1.75em;
-  text-transform:uppercase;
   line-height: 24px;
 }
 
 a.rsvp:hover {
   color:#ae6835;
   background-color:transparent;
+}
+
+a.external[target="_blank"]:after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
 }
 
 main {
@@ -135,12 +192,13 @@ section > h3 {
 section > h3:before {
   content:"";
   display:block;
-  height:1px;
+  height: 3px;
   width:100%;
   position:absolute;
-  top:calc(50% - 1px);
+  top: calc(50% - 2px);
   z-index:-1;
   background:#ae6835;
+  border-radius: 3px;
 }
 
 section > h3 span {
@@ -151,11 +209,11 @@ section > h3 span {
 
 section.hero {
   position:relative;
-  margin-bottom:8%;
 }
 
 #bg-slider {
   display:flex;
+  height: auto !important;
 }
 
 #bg-slider li {
@@ -178,21 +236,20 @@ section.hero .badge-wrapper {
   text-align: center;
 }
 
-nav .header-badge-wrapper, section.hero .badge-wrapper::before, footer .footer-badge-wrapper {
+header .header-badge-wrapper, section.hero .badge-wrapper::before, footer .footer-badge-wrapper {
   background-image: url(../img/hero-center.png);
   background-repeat: no-repeat;
   background-size:100%;
 }
 
-nav .header-badge-wrapper {
+header .header-badge-wrapper {
   height:40px;
   width:43px;
   display:flex;
   align-items:center;
-  margin-right:12px;
 }
 
-nav .header-badge-inner {
+header .header-badge-inner {
   width:100%;
   color: #fff;
   font-size:24px;
@@ -265,18 +322,19 @@ section.hero .badge-inner::after {
     height: 140px;
     width: 95px;
     top: -20%;
-    right: -95px;
+    right: -75px;
 }
 
 section.hero .badge-inner h1, section.hero .badge-inner h2 {
   color:#fff;
+  text-shadow: 1px 1px 7px rgba(0,0,0,0.2);
 }
 
-nav .header-badge-inner, section.hero .badge-inner h1, footer .footer-badge-inner {
+header .header-badge-inner, section.hero .badge-inner h1, footer .footer-badge-inner {
   font-family:'Dandelion Vintage', cursive;
 }
 
-nav .header-badge-inner span, section.hero .badge-inner h1 span, footer .footer-badge-inner span {
+header .header-badge-inner span, section.hero .badge-inner h1 span, footer .footer-badge-inner span {
   font-family:'Marigold', cursive;
   font-weight: 500;
 }
@@ -284,12 +342,15 @@ nav .header-badge-inner span, section.hero .badge-inner h1 span, footer .footer-
 section.hero .badge-inner h2 {
   font-family:'Claxton', sans-serif;
   font-weight:300;
-  text-shadow: 1px 1px 7px rgba(0,0,0,0.15);
 }
 
 section.hero .badge-inner h2 span {
   position:relative;
   bottom:4px;
+}
+
+.tab-content.auto-size {
+  transition:height 0.2s ease-in-out;
 }
 
 section.bride-and-groom input[type=radio], section.details input[type=radio] {
@@ -324,7 +385,14 @@ section.bride-and-groom .tab-content aside {
 
 section.bride-and-groom .tab-content aside h4, section.details .tabs h3, section.details article h4 {
   font-family:'Soak Up The Sun Script', cursive;
-  font-size: 4em;
+}
+
+section.bride-and-groom .tab-content aside h4 {
+  font-size:4em;
+}
+
+section.details .tabs h3, section.details article h4 {
+  font-size:5em;
 }
 
 section.bride-and-groom .tab-content aside span {
@@ -442,18 +510,17 @@ section.break {
 section.details .tab-container {
   width:70%;
   max-width:1040px;
-  height:720px;
   margin:0 auto 4%;
   position:relative;
 }
 
 section.details .tabs {
-  height:100%;
   background:url(../img/info-bg.jpg) no-repeat center;
   background-size:cover;
   display:flex;
   flex-wrap:wrap;
   padding:70px 100px;
+  min-height: 100%;
 }
 
 section.details .tabs > li {
@@ -462,6 +529,7 @@ section.details .tabs > li {
   align-items:center;
   justify-content:center;
   background: rgba(216, 208, 196, 0.4);
+  padding:15% 0;
 }
 
 section.details .tabs > li:first-child, section.details .tabs > li:last-child {
@@ -477,7 +545,7 @@ section.details .tab-content {
   top:0;
   z-index:1;
   width:100%;
-  height:100%;
+  min-height: 100%;
   background:rgba(255,255,255,0.9);
 }
 
@@ -507,9 +575,10 @@ section.details .tab-content > label:hover, section.details .tab-content a:not(.
 }
 
 section.details .tab-content > div {
-  height:100%;
-  display:flex;
+  min-height: 100%;
   align-items:center;
+  width: 100%;
+  padding: 6% 0;
 }
 
 section.details .tab-content article, section.details .tab-content aside, section.details ul.options li {
@@ -690,4 +759,188 @@ section.countdown span::after {
 
 #seconds::after {
   content:"seconds";
+}
+
+@media (max-width: 1500px) {
+  section.bride-and-groom .tab-content aside {
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  section.bride-and-groom .tab-content aside span {
+    margin-left:0;
+    margin-top:1.5em;
+  }
+}
+
+@media (max-width: 1200px) {
+  section {
+    margin-bottom:8%;
+  }
+
+  section > h3 {
+    margin-bottom:4%;
+  }
+
+  section.details .tab-content, section.details .tab-content > div {
+    flex-direction:column;
+  }
+
+  section.details .tab-container {
+    width:94%;
+  }
+
+  section.details .tabs {
+    padding:35px 50px;
+  }
+
+  section.details .tabs > li {
+    flex:0 0 100%;
+  }
+
+  section.details .tabs > li:last-child {
+    background:rgba(216, 208, 196, 0.4);
+    color:#222;
+  }
+
+  section.details .tabs > li:nth-child(3) {
+    background: rgba(174, 104, 53, 0.6);
+    color: #fff;
+  }
+
+  section.details article, section.details aside {
+    padding:2em 1em;
+  }
+}
+
+@media (max-width: 1000px) {
+  section.countdown div {
+    width: 18%;
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    padding-right:1em;
+  }
+
+  header label.mobile {
+    display:flex;
+  }
+
+  header nav::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right: 0;
+    width: 100%;
+    height:90px;
+    margin:0 auto;
+    background:#fbf8f7;
+  }
+
+  header nav {
+    flex-direction:row-reverse
+  }
+
+  header nav ol {
+    position:absolute;
+    top:90px;
+    left:0;
+    z-index:-1;
+    width:100%;
+    background:#fbf8f7;
+    flex-direction:column;
+    transform:translate3d(0, calc(-100% - 90px), 0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  header nav ol a {
+    padding:1em 2em;
+  }
+
+  header input.mobile:checked ~ ol {
+    transform: translate3d(0, 0, 0);
+  }
+
+  section.hero .badge-inner h1 {
+    margin-bottom:1%;
+  }
+
+  section.hero .badge-inner h2 {
+    font-size:1.5em;
+  }
+
+  section.hero .badge-inner::before {
+    height:105px;
+    width:71px;
+    background-size:75%;
+    top:5%;
+    left:-15%;
+  }
+
+  section.hero .badge-inner::after {
+    height:105px;
+    width:71px;
+    background-size:75%;
+    top:5%;
+    right:-25%;
+  }
+
+  footer {
+    padding:6% 0;
+  }
+}
+
+@media (max-width: 700px) {
+  section.bride-and-groom .tab-content > div {
+    flex-direction:column;
+  }
+
+  section.bride-and-groom .tab-content > div > * {
+    width:98%;
+  }
+
+  section.bride-and-groom .tab-content img {
+    margin:0 0 0.5em 0;
+  }
+
+  section.countdown div {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  section.countdown span::after {
+    font-size:16px;
+    line-height:20px;
+  }
+}
+
+@media (max-width: 550px) {
+  section.bride-and-groom .tabs .icon-bg {
+    width:50px;
+    height:50px;
+    background-size:50px;
+    margin:0 auto 0.75em;
+  }
+
+  section.bride-and-groom .tabs h3 {
+    font-size:0.9em;
+  }
+
+  section.details .tabs h3 {
+    font-size:4em;
+  }
+
+  section.countdown div {
+    width:22%;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  section.countdown span::after {
+    font-size:14px;
+    line-height:16px;
+  }
 }

@@ -3,11 +3,20 @@ $(function() {
   $('#bg-slider').lightSlider({
     item: 5,
     slideMargin: 0,
+    adaptiveHeight: true,
     auto: true,
     loop: true,
     pager: false,
     gallery: false,
     pause: 5000,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          item: 3,
+        },
+      }
+    ]
   });
 
   var $gallery = $('#gallery');
@@ -19,7 +28,11 @@ $(function() {
     gallery_theme: "tiles"
   });
 
-  setupTabHeightFix();
+  $('nav a').on('click', function(e) {
+    $('input.mobile').prop('checked', false);
+  })
+
+  setupTabAutoAdjust();
   setupSmoothScrolling();
   countdown('2019-10-12T19:00:00-06:00');
 
@@ -27,16 +40,35 @@ $(function() {
   setTimeout(function() {
     $('section.hero .badge-wrapper').addClass('animate');
   }, 150);
+
+  $('section.details input').on('change', function(e) {
+    if ($('label.mobile').is(':visible')) {
+      $('nav a[href="#details"]').click();
+    }
+  });
 });
 
-function setupTabHeightFix() {
-  var _assignParentHeight = function() {
-    var maxHeight = Math.max.apply(null, $('.tab-content.auto-size > div').get().map(function(tab) { return $(tab).outerHeight(); }));
-    $('.tab-content.auto-size').css('height', maxHeight + 'px');
+function setupTabAutoAdjust() {
+  var _recalcHeights = function() {
+    $('.tab-content.auto-size').each(function(i, tabContent) {
+      var $tabContent = $(tabContent);
+      if ($tabContent.parent('.tab-container').length > 0) {
+        $tabContent = $tabContent.parent('.tab-container');
+      }
+
+      var $selectedTab = $tabContent.siblings('input:checked');
+      var $visibleTab = $tabContent.find('.' + $selectedTab.attr('id'));
+      $tabContent.css('height', $visibleTab.length > 0 ? $visibleTab.outerHeight() + 'px' : '');
+    });
   };
 
-  _assignParentHeight();
-  $(window).on('resize', _assignParentHeight);
+  _recalcHeights();
+  $(window).on('resize', _recalcHeights);
+
+  $('.has-auto-size-tabs input').on('change', function(e) {    
+    var $tabToShow = $(this).siblings('.tab-content, .tab-container').find('.' + $(this).attr('id'));
+    $(this).siblings('.tab-content, .tab-container').css('height', $tabToShow.length > 0 ? $tabToShow.outerHeight() + 'px' : '');
+  });
 }
 
 function setupSmoothScrolling() {
