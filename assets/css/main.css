@@ -504,7 +504,7 @@ section.break {
   background:url(../img/break.jpg);
   background-attachment: fixed;
   height: 540px;
-  background-size: 100%;
+  background-size: cover;
 }
 
 section.details .tab-container {
