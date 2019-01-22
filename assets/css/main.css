@@ -779,6 +779,10 @@ section.countdown span::after {
     margin-left:0;
     margin-top:1.5em;
   }
+
+  section.bride-and-groom .tab-content article p {
+    font-size:0.8em;
+  }
 }
 
 @media (max-width: 1200px) {
