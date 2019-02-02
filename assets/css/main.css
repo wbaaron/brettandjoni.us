@@ -58,8 +58,11 @@ header h1 {
   z-index:1;
 }
 
+header h1 a, section > p a {
+  text-decoration: none;
+}
+
 header h1 a {
-  text-decoration:none;
   display: block;
   padding:10px 8px 8px;
   border-radius:50%;
@@ -79,7 +82,7 @@ header li {
   display:inline-block;
 }
 
-header li a:hover {
+header li a:hover, section > p a {
   color:#ae6835;
 }
 
@@ -180,13 +183,16 @@ section {
   margin-bottom: 4%;
 }
 
-section > h3 {
-  text-transform:uppercase;
+section > h3, section > p {
   text-align:center;
   margin:0 auto 2%;
   position:relative;
   width:1280px;
   max-width:98%;
+}
+
+section > h3 {
+  text-transform:uppercase;
 }
 
 section > h3:before {
@@ -353,7 +359,7 @@ section.hero .badge-inner h2 span {
   transition:height 0.2s ease-in-out;
 }
 
-.mobile-br {
+.mobile-br, section.registry > p br {
   display:none;
 }
 
@@ -883,6 +889,10 @@ section.countdown span::after {
     transform: translate3d(0, 0, 0);
   }
 
+  section > p {
+    margin-bottom:4%;
+  }
+
   section.hero .badge-inner h1 {
     margin-bottom:1%;
   }
@@ -913,6 +923,10 @@ section.countdown span::after {
 }
 
 @media (max-width: 700px) {
+  section > p {
+    font-size:0.8em;
+  }
+
   section.bride-and-groom .tab-content > div {
     flex-direction:column;
   }
@@ -937,6 +951,11 @@ section.countdown span::after {
 }
 
 @media (max-width: 550px) {
+  section.registry > p br {
+    display:block;
+    line-height:1.5;
+  }
+
   section.bride-and-groom .tabs .icon-bg {
     width:50px;
     height:50px;
