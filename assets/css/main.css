@@ -695,7 +695,8 @@ section.details ul.list li {
 
 section.registry .registry-container {
   position: relative;
-  overflow:hidden;
+  overflow-y:scroll;
+  -webkit-overflow-scrolling: touch;
   padding-top:300%;
   width:1280px;
   max-width:94%;

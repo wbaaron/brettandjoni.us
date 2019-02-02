@@ -20,7 +20,7 @@ $(function() {
   });
 
   var $gallery = $('#gallery');
-  for (i = 1; i <= 11; ++i) {
+  for (i = 1; i <= 20; ++i) {
     $("#gallery").append('<img alt="" src="assets/img/gallery/' + i + '_tn.jpg" data-image="assets/img/gallery/' + i + '.jpg" data-description="">');
   }
 
