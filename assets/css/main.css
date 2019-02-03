@@ -517,6 +517,12 @@ section.break {
   background-size: cover;
 }
 
+@supports (-webkit-overflow-scrolling: touch) {
+  section.break {
+    background-attachment: scroll;
+  }
+}
+
 section.details .tab-container {
   width:70%;
   max-width:1040px;

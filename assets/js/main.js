@@ -46,6 +46,15 @@ $(function() {
   setTimeout(function() {
     $('section.hero .badge-wrapper').addClass('animate');
   }, 150);
+
+  // background-position: fixed is disabled on iOS, so fake it
+  var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (isiOS) {
+    $(window).scroll(function() {
+      var scrolledY = $(window).scrollTop();
+      $('section.break').css('background-position', 'center ' + ((scrolledY)) + 'px');
+    });
+  }
 });
 
 function setupTabAutoAdjust() {
