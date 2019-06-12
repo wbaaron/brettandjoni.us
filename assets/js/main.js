@@ -34,7 +34,7 @@ $(function() {
 
   setupTabAutoAdjust();
   setupSmoothScrolling();
-  countdown('2019-10-12T19:00:00-06:00');
+  countdown('2019-10-12T18:15:00-05:00');
 
   $('section.details input').on('change', function(e) {
     if ($('label.mobile').is(':visible')) {
